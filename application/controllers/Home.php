@@ -58,7 +58,7 @@ class Home extends CI_Controller {
 		$data['soal_sn'] = $this->soal->get_soal_sn()->result();
 		$data['soal_tf'] = $this->soal->get_soal_tf()->result();
 		$data['soal_jp'] = $this->soal->get_soal_jp()->result();
-
+	
 		$this->load->view('tesmbti', $data);
 	}
 
@@ -318,13 +318,23 @@ class Home extends CI_Controller {
 		$id_mahasiswa = $_SESSION['id_mahasiswa'];
 		$query = $this->soal->input_hasiltes($id_mahasiswa, $totalE, $totalI, $totalS, $totalN, $totalT, $totalF, $totalJ, $totalP, $hasil);
 
-		$this->load->model('user');
-		$data['tbhasiltes'] = $this->user->get_hasiltes()->result();
-		$data['tbtipekepribadian'] = $this->user->get_kepribadian()->result();
-		$this->load->view('hasiltes', $data);
+		// $this->load->model('user');
+		
+		
+		$this->load->view('hasiltes', $hasil);
 
 		$this->output->enable_profiler(TRUE);
 	}
+	
+	// public function hasiltes(){
+		// $this->load->model->get_hasiltes();
+		// $data['tbhasiltes'] = $this->user->get_hasiltes->result();
+		// $this->load->view('hasiltes',$data);
+		
+		// $this->output->enable_profiler(TRUE);
+
+
+	// }
 
 	public function pengelompokan(){
 
@@ -493,10 +503,6 @@ header("location: ../user_lihatkamar.php");
 
 
 
-}
-
-public function lihat_kamar(){
-	
 }
 
 ?>
