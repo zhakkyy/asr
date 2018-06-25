@@ -60,7 +60,7 @@
         </div>
         <div class="pull-left info">
 
-          <p>Hello, <?php echo $_SESSION['username'];  ?>!</p>
+          <p>Hello, <?php echo $username;  ?>!</p>
         </div>
       </div>
       <!--Menu Sidenav-->

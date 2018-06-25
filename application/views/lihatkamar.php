@@ -27,10 +27,7 @@
           <i class="material-icons admin md-48" alt="user-image">face </i>
         </div>
         <div class="pull-left info">
-          <?php
-          $query = "SELECT * FROM tbpenghuni WHERE username = '".$_SESSION['username']."'";
-          ?>
-          <p>Hello, <?php echo $_SESSION['username'];  ?>!</p>
+          <p>Hello, <?php echo $_SESSION['username']; ?>!</p>
         </div>
       </div>
       <!--Menu Sidenav-->

@@ -22,10 +22,10 @@
      function alert(){ //alert mulai kuis
      var msg = confirm("Tes ini hanya dapat dilakukan 1x dan bacalah petunjuknya terlebih dahulu, yakin untuk memulai ?");
      if(msg==true){
-        window.location="<?php echo site_url();?>/home/tesmbti";
+        window.location="<?php echo site_url();?>/tes/tesmbti";
      }
      else{
-        window.location="<?php echo site_url();?>/home/indextes";
+        window.location="<?php echo site_url();?>/tes/indextes";
         
      }
      }

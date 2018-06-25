@@ -39,7 +39,7 @@
   </div>
 
           <div class="container">
-            <form action="<?php echo site_url();?>/home/hasil_tesmbti" class="" role="form" method="post" accept-charset="utf-8" id="soal" >
+            <form action="<?php echo site_url();?>/tes/hasil_tesmbti" class="" role="form" method="post" accept-charset="utf-8" id="soal" >
               <div class="row">
               <!-- EI -->
                 <?php foreach($soal_ei as $row) {?>
@@ -59,10 +59,10 @@
                         <?php echo $row->soal_i;?>
                       </span>
                   </label>
-                  </div>
+                  </div>                        
                   <hr>
                 <?php }?>
-                <hr>
+                <hr>    
                 <!-- SN -->
                 <?php foreach($soal_sn as $row) {?>
                   <div>
@@ -81,7 +81,7 @@
                         <?php echo $row->soal_n;?>
                       </span>
                   </label>
-                  </div>
+                  </div>                        
                   <hr>
                 <?php }?>
                 <hr>
@@ -103,10 +103,10 @@
                         <?php echo $row->soal_f;?>
                       </span>
                   </label>
-                  </div>
+                  </div>                        
                   <hr>
                 <?php }?>
-                <hr>
+                <hr> 
                 <!-- JP -->
                 <?php foreach($soal_jp as $row) {?>
                   <div>
@@ -125,14 +125,14 @@
                         <?php echo $row->soal_p;?>
                       </span>
                   </label>
-                  </div>
+                  </div>                        
                   <hr>
                 <?php }?>
-                <input type="submit" name="btnSubmit" value="Lihat Hasil" class="btn btn-primary teal right" style="padding-left:100px; padding-right:100px;">
-              </div>  <!-- row -->
+                <input type="submit" name="btnSubmit" value="Lihat Hasil" class="btn btn-primary teal right" style="padding-left:100px; padding-right:100px;">  
+              </div>  <!-- row -->              
             </form>
           </div>
-          <br><br><br>
+
       <!--Footer-->
         <footer class="red darken-3">
           <div class="layout">

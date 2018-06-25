@@ -32,18 +32,18 @@ class Kamar extends CI_Model {
     }
 
     public function cek_kriteria(){
-        $query = $this->db->query("SELECT * FROM tbkriteria k WHERE k.kriteria1 LIKE SUBSTR('$tipe_penghuni_butuh_kamar',2,2) AND k.kriteria2 IN
-            (SELECT SUBSTR('$tipe_kepribadian',2,2) FROM tbisikamar i JOIN tbhasiltes h ON  i.id_penghuni = h.id_penghuni WHERE i.id_kamar = '$id_kamar_isi_kamar'");
+        $query = $this->db->query("SELECT * FROM tbkriteria k WHERE k.kriteria1 LIKE SUBSTR('$tipe_kepribadian',2,2) AND k.kriteria2 IN
+            (SELECT SUBSTR('$tipekepribadian_penghuni',2,2) FROM tbisikamar i JOIN tbhasiltes h ON  i.id_penghuni = h.id_penghuni WHERE i.id_kamar = '$id_kamar_isi_kamar'");
         return $query;
     }
 
     public function input_penghuniperempuan(){
-        $query = $this->db->query("INSERT INTO tbisikamar (id_kamar, id_penghuni) VALUES ($id_kamar_perempuan, $id_penghuni_butuh_kamar)");
+        $query = $this->db->query("INSERT INTO tbisikamar (id_kamar, id_penghuni) VALUES ($id_kamar_perempuan, $id_mahasiswa)");
         return $query;
     }
 
     public function input_penghunilaki(){
-        $query = $this->db->query("INSERT INTO tbisikamar (id_kamar, id_penghuni) VALUES ($id_kamar_laki, $id_penghuni_butuh_kamar)");
+        $query = $this->db->query("INSERT INTO tbisikamar (id_kamar, id_penghuni) VALUES ($id_kamar_laki, $id_mahasiswa)");
         return $query;
     }
 }

@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
   <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -44,8 +43,10 @@
             <h3 class="header" name="hasiltest" id='diagramhasil'>
               <p>--
                 <b>
-                    
-
+                    <?php
+                      foreach ($tbhasiltes as $row){
+                      echo $row->tipe_kepribadian;
+                     ?>
                 </b> <!--Hasil Tipe-->
               --</p>
             </h3>
@@ -63,9 +64,9 @@
               <b style="font-size:23px;">Skor :</b>
             </div>
 
-            <div class="" style="height:60%;"> <!--hasil dari tes bukan diagram-->
+            <div class="" style="height:60%;">
               <div id="stackedchart_values"></div>
-              <p>&nbsp &nbsp &nbsp &nbsp &nbsp -Extrovert : <?php echo $row->nilai_e;?> (<?php echo round($persenE,0);?>%) &nbsp Introvert : <?php echo $row->nilai_i;?> (<?php echo round($persenI,0);?>%)</p>
+              <p>&nbsp &nbsp &nbsp &nbsp &nbsp -Extrovert : <?php echo $row->nilai_e;?> (<?php echo round($persenE,0);?>%) &nbsp Introvert : <?php echo $row->nilai_i;?> (<?php echo round($persenI,0);?>%)</p> <!--hasil dari tes bukan diagram-->
               <div id="stackedchart_values2"></div>
               <p>&nbsp &nbsp &nbsp &nbsp &nbsp -Sensing : <?php echo $row->nilai_s;?> (<?php echo round($persenS,0);?>%) &nbsp Intuitive : <?php echo $row->nilai_n;?> (<?php echo round($persenN,0);?>%)</p>
               <div id="stackedchart_values3"></div>
@@ -75,12 +76,11 @@
               <br>
             </div>
           </div>
-
+          <?php }?>
           <?php
             foreach ($tbtipekepribadian as $row){
-			// exit;
-
-          ?>
+            
+          ?>              
           <div class="right-sidebar grey lighten-2">
             <div class="col" id="divtoprint3">
               <b style="font-size:23px;">Deskripsi :</b><br><br> <!--Call deskripsi jawaban-->
@@ -92,7 +92,7 @@
             <?php }?>
               <div class="right" style="padding-right:10px; padding-bottom:10px;">
                 <div class="">
-                  <a href="inc/user_pengelompokan.php"><button type="button" class="btn pmd-btn-raised pmd-ripple-effect btn-danger">Lihat Kamar</button></a>
+                  <a href="<?php echo site_url();?>/asrama/pengelompokan"><button type="button" class="btn pmd-btn-raised pmd-ripple-effect btn-danger">Lihat Kamar</button></a>
                 </div>
               </div>
 
